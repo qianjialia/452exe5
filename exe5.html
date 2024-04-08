@@ -1,0 +1,52 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Center Image and Replace with Button</title>  
+    <style>  
+       body, html {  
+            height: 100%;  
+            margin: 0;  
+        }  
+          
+        .image-container {  
+            display: flex;  
+            flex-direction: column;  
+            justify-content: center;  
+            align-items: center;  
+            height: 100vh; /* 使用视口高度单位vh来确保容器占据整个视口的高度 */  
+        }  
+          
+        img {  
+            max-width: 100%;  
+            height: auto;  
+        }  
+          
+        button {  
+            margin-top: 20px; /* 添加上边距，将按钮与图片隔开 */  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="image-container">  
+        <h1>my name is Qian Jialiang and English name is Hunter</h1>
+        <p style="font-size: 50px; background-color: rgb(121, 120, 120);">This is my attractive image using box model</p>
+
+        <img id="myImage" src="1.jpg" style="width:400px;height: 400px; " alt="Centered Image">  
+        <button id="changeImageButton">Replace Image</button>  
+    </div>  
+  
+    <script>  
+        document.addEventListener("DOMContentLoaded", function() {  
+            var changeImageButton = document.getElementById("changeImageButton");  
+            var myImage = document.getElementById("myImage");  
+            var newImageUrl = "2.jpg"; // 替换为新的图像URL  
+  
+            changeImageButton.addEventListener("click", function() {  
+                myImage.src = newImageUrl; // 更换图片的src属性  
+            });  
+        });  
+    </script>  
+</body>  
+</html>
